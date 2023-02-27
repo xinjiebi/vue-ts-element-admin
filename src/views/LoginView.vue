@@ -1,18 +1,23 @@
 <template>
-    <div>
-        我是登录页面
-    </div>
+  <div>
+    <p @click="signIn">我是登录页面</p>
+  </div>
 </template>
 
 <script lang="ts">
-    import { Options, Vue } from 'vue-class-component';
+import { Options, Vue } from "vue-class-component";
+import { SignInRule } from "@/Inter/LoginInter";
+@Options({})
+export default class Login extends Vue {
+  signFrom = new SignInRule;
 
-    @Options({})
-    export default class  extends Vue {
-        
-    }
+  signIn() {
+    console.log(this.signFrom.rulesData);
+
+
+  }
+}
 </script>
 
 <style scoped>
-
 </style>

@@ -1,40 +1,71 @@
 interface ILoginForm {
-    username:string,
-    password:string
+    username: string,
+    password: string
 }
 
-export class signIn {
-    signInDate:ILoginForm = {
+export class SignInData {
+    username = ""
+    password = ""
+
+    get user() {
+        return this.username
+    }
+
+    set user(value) {
+        this.username = value
+    }
+
+    get pass() {
+        return this.password
+    }
+
+    set pass(value) {
+        this.password = value
+    }
+}
+
+export class SignInRule {
+    required = true
+    message = "Please enter "
+    trigger = ['blur', 'change']
+    rulesData = {}
+    constructor() {
+        this.rulesData = {
+            username: {
+                required: true,
+                message: `${this.message}username`,
+                trigger: this.trigger
+            },
+            password:{
+                required: true,
+                message: `${this.message}password`,
+                trigger: this.trigger
+            }
+        }
+    }
+}
+
+export class SignIn {
+    loginData: ILoginForm = {
         username: "",
         password: ""
     }
-    constructor(username:string, password:string){
-        this.signInDate.username = username
-        this.signInDate.password = password
-    }
 
-    get username(){
-        return this.signInDate.username
-    }
-
-    get password(){
-        return this.signInDate.password
-    }
-    
-    set username(value){
-        this.signInDate.username = value
-    }
-
-    set password(value){
-        this.signInDate.password = value
-    }
-
-    signIn(){
-        if(this.signInDate.username == '' || this.signInDate.password == ''){
-            console.log("账号密码没有输入")
-        }else{
-            console.log("账号密码已经输入");
-            
+    constructor(username: string, password: string) {
+        this.loginData = {
+            username: username,
+            password: password
         }
+    }
+
+    toSign() {
+        if (this.loginData.username === "" || this.loginData.password === "") {
+            console.log("信息不完善");
+
+        } else {
+            console.log("该跳转了");
+        }
+
+
     }
 }
