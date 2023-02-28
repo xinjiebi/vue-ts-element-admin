@@ -120,4 +120,14 @@ body,
     padding: 20px;
   }
 }
+.dashboardCard{
+  .el-card{
+    border-radius: 12px;
+    background-color: @soft100;
+    border: none;
+    h2{
+      height: 60px;
+    }
+  }
+}
 </style>
