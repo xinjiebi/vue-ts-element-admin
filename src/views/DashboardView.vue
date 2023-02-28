@@ -13,30 +13,48 @@
       <el-col :md="12" :lg="6">
         <DashboardWeekListen></DashboardWeekListen>
       </el-col>
+      <el-col :md="12" :lg="8">
+        <DashboardWork></DashboardWork>
+      </el-col>
+      <el-col :md="12" :lg="16">
+        <StackedLine></StackedLine>
+      </el-col>
+      <el-col :md="12" :lg="8">
+        <Radar></Radar>
+      </el-col>
+      <el-col :md="12" :lg="8">
+        <Category></Category>
+      </el-col>
+      <el-col :md="12" :lg="8">
+        <CategoryArea></CategoryArea>
+      </el-col>
     </el-row>
-    
-
-    <div id="stackedLine" :style="{ width: '100%', height: '360px' }"></div>
   </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
-import { StackedLine } from "@/Inter/dashboard";
 import DashboardWeekMusic from "@/components/dashboard/dashboardWeekMusic.vue";
 import DashboardWeekVideo from "@/components/dashboard/dashboardWeekVideo.vue";
 import DashboardWeekIncome from "@/components/dashboard/dashboardWeekIncome.vue";
 import DashboardWeekListen from "@/components/dashboard/dashboardWeekListen.vue";
+import DashboardWork from "@/components/dashboard/dashboardWork.vue";
+import StackedLine from "@/components/dashboard/stackedLine.vue";
+import Radar from "@/components/dashboard/radar.vue";
+import CategoryArea from "@/components/dashboard/categoryArea.vue";
+import Category from "@/components/dashboard/category.vue";
+
 @Options({
   components: {
     DashboardWeekMusic,
     DashboardWeekVideo,
     DashboardWeekIncome,
-    DashboardWeekListen
-  },
-  mounted() {
-    new StackedLine();
-    console.log(new StackedLine());
+    DashboardWeekListen,
+    DashboardWork,
+    StackedLine,
+    Radar,
+    Category,
+    CategoryArea,
   },
 })
 export default class extends Vue {}

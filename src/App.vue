@@ -4,6 +4,7 @@
 
 <style lang="less">
 @import url(@/assets/sytle/lightConfig.less);
+// @import url(@/assets/sytle/darkConfig.less);
 @import url(@/assets/sytle/neutraColor.less);
 @import url(@/assets/sytle/fontstyle.less);
 * {
@@ -35,6 +36,12 @@ body,
 }
 .cutline {
   background-color: @soft15;
+  width: 100%;
+  height: 1px;
+  margin: 10px 0;
+}
+.cutlineHeavy {
+  background-color: @disable;
   width: 100%;
   height: 1px;
   margin: 10px 0;
@@ -92,42 +99,52 @@ body,
   }
   .content {
     width: calc(100vw - 200px);
-    .pageHeader{
+    .pageHeader {
       width: 100%;
       height: 52px;
       background-color: @soft100;
       padding: 0 20px;
       display: flex;
       justify-content: space-between;
-      h2{
+      h2 {
         line-height: 52px;
         color: @heavy100;
-      }.enter{
+      }
+      .enter {
         margin: 8px 0;
-        .el-button{
-        width: 36px;
-        height: 36px;
+        .el-button {
+          width: 36px;
+          height: 36px;
+        }
       }
-      }
-      
     }
   }
-  .viewPage{
+  .viewPage {
     width: 100%;
     height: calc(100vh - 52px);
     overflow: auto;
-    border: 1px solid red;
+    // border: 1px solid red;
     padding: 20px;
   }
 }
-.dashboardCard{
-  .el-card{
+.dashboardCard {
+  .el-card {
     border-radius: 12px;
     background-color: @soft100;
     border: none;
-    h2{
+    color: @heavy100;
+    h2 {
       height: 60px;
     }
   }
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+  }
+}
+.el-col {
+  margin-bottom: 20px;
 }
 </style>
