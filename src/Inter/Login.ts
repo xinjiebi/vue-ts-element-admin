@@ -1,3 +1,4 @@
+import { ElMessage } from "element-plus";
 interface ILoginForm {
     username: string,
     password: string
@@ -51,6 +52,7 @@ export class SignIn {
         password: ""
     }
 
+
     constructor(username: string, password: string) {
         this.loginData = {
             username: username,
@@ -59,11 +61,25 @@ export class SignIn {
     }
 
     toSign() {
+        
         if (this.loginData.username === "" || this.loginData.password === "") {
-            console.log("信息不完善");
-
-        } else {
-            console.log("该跳转了");
+            ElMessage({
+                message:"账号密码不能为空",
+                type:"error"
+            })
+            return false
+        } else if(this.loginData.username === "bibi" || this.loginData.password === "123123"){
+            ElMessage({
+                message:"欢迎回来 BiBi",
+                type:"success"
+            })
+            return true
+        }else{
+            ElMessage({
+                message:"账号密码错误",
+                type:"error"
+            })
+            return false
         }
 
 
