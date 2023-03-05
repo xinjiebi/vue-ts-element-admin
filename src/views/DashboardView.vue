@@ -28,6 +28,14 @@
       <el-col :md="12" :lg="8">
         <CategoryArea></CategoryArea>
       </el-col>
+      <el-col :md="12" :lg="8">
+        <el-card shadow="never">
+          <p>test icon</p>
+          <!-- <i class="bbIcon bb-more-1" style="font-size:102px;"></i> -->
+          <BBIcon name="bb-home-1" color="@mainColor"></BBIcon>
+          <BBIcon name="bb-download1" size="32"></BBIcon>
+        </el-card>
+      </el-col>
     </el-row>
   </div>
 </template>
@@ -43,6 +51,7 @@ import StackedLine from "@/components/dashboard/stackedLine.vue";
 import Radar from "@/components/dashboard/radar.vue";
 import CategoryArea from "@/components/dashboard/categoryArea.vue";
 import Category from "@/components/dashboard/category.vue";
+import BBIcon from "@/components/iconComponent.vue"
 
 @Options({
   components: {
@@ -55,10 +64,16 @@ import Category from "@/components/dashboard/category.vue";
     Radar,
     Category,
     CategoryArea,
+    BBIcon
   },
 })
+
 export default class extends Vue {}
 </script>
 
-<style scoped>
+<style lang="less" scoped>
+// light mode 颜色样式
+@import url(@/assets/sytle/lightConfig.less);
+// dark mode 颜色样式
+// @import url(@/assets/sytle/darkConfig.less);
 </style>

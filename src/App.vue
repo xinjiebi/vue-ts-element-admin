@@ -4,9 +4,9 @@
 
 <style lang="less">
 // light mode 颜色样式
-// @import url(@/assets/sytle/lightConfig.less);
+@import url(@/assets/sytle/lightConfig.less);
 // dark mode 颜色样式
-@import url(@/assets/sytle/darkConfig.less);
+// @import url(@/assets/sytle/darkConfig.less);
 @import url(@/assets/sytle/neutraColor.less);
 @import url(@/assets/sytle/fontstyle.less);
 * {
@@ -17,16 +17,18 @@
 html,
 body,
 #app {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   min-width: 1280px;
+  overflow: hidden;
   background-color: @background;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE 10+ */
+  ::-webkit-scrollbar {
+    display: none; /* Chrome Safari */
+  }
 }
-::-webkit-scrollbar {
-  display: none; /* Chrome Safari */
-}
+
 .signInBox {
   background-color: @mainColor;
   .el-form-item__label {
@@ -54,24 +56,24 @@ body,
   background-color: @soft100 !important;
   border: none !important;
   color: @heavy100 !important;
+
 }
 .el-col {
   // 添加所有el-col的下间距
   margin-bottom: 20px !important;
 }
-.el-form-item__label{
-  color:@heavy85 !important;
+.el-form-item__label {
+  color: @heavy85 !important;
 }
 .el-input {
-    --el-input-text-color: @heavy100 !important; 
-    --el-input-hover-border: @heavy15 !important;
-    --el-input-focus-border: @heavy15 !important;
-    --el-input-transparent-border: 0 0 0 1px transparent inset;
-    --el-input-border-color: @heavy15 !important;
-    --el-input-bg-color: @soft100 !important;
-    --el-input-icon-color: @heavy50 !important;
-    --el-input-placeholder-color: @soft50  !important;
-
+  --el-input-text-color: @heavy100 !important;
+  --el-input-hover-border: @heavy15 !important;
+  --el-input-focus-border: @heavy15 !important;
+  --el-input-transparent-border: 0 0 0 1px transparent inset;
+  --el-input-border-color: @heavy15 !important;
+  --el-input-bg-color: @soft100 !important;
+  --el-input-icon-color: @heavy50 !important;
+  --el-input-placeholder-color: @soft50 !important;
 }
 .el-table__row {
   height: 58px;
@@ -196,37 +198,43 @@ body,
     margin-top: 12px;
   }
 }
+.tableListBox{
+  .el-card {
+    max-width: 1280px;
+    min-width: 1040px;
+  }
+}
 .maxCard {
   .el-card {
     max-width: 1280px;
     min-width: 1040px;
     margin: 0 auto;
     .item {
-  display: flex;
-  justify-content: left;
-  padding: 20px 0;
-  border-bottom: 1px solid @disable;
-  img {
-    width: 160px;
-    height: 96px;
-  }
-  .itemText {
-    margin-left: 12px;
-    p {
-      margin-top: 2px;
-      margin-bottom: 12px;
-      span {
-        margin-right: 12px;
+      display: flex;
+      justify-content: left;
+      padding: 20px 0;
+      border-bottom: 1px solid @disable;
+      img {
+        width: 160px;
+        height: 96px;
+      }
+      .itemText {
+        margin-left: 12px;
+        p {
+          margin-top: 2px;
+          margin-bottom: 12px;
+          span {
+            margin-right: 12px;
+          }
+        }
+        .itemButton {
+          color: @heavy100;
+          span {
+            margin-right: 20px;
+          }
+        }
       }
     }
-    .itemButton {
-      color: @heavy100;
-      span {
-        margin-right: 20px;
-      }
-    }
-  }
-}
   }
   .uploadBox {
     margin-left: 120px;

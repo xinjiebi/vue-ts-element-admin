@@ -19,6 +19,16 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/DashboardView.vue')
       },
       {
+        path: '/bibiIconfont',
+        name: 'bibiIconfont',
+        meta: {
+          isShow: true,
+          title: 'BiBi\'s Icon',
+          icon: 'Odometer'
+        },
+        component: () => import('@/views/BiBiIconfont.vue')
+      },
+      {
         path: '/tableList',
         name: 'tableList',
         meta: {
