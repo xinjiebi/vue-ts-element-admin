@@ -1,4 +1,54 @@
-// universal
+const subNav = [
+    {
+        title:"通用图标",
+        type:"universal"
+    },
+    {
+        title:"音乐图标",
+        type:"music"
+    },
+    {
+        title:"社交图标",
+        type:"social"
+    },
+    {
+        title:"购物图标",
+        type:"shopping"
+    },
+    {
+        title:"食物图标",
+        type:"food"
+    },
+    {
+        title:"表情图标",
+        type:"emoji"
+    },
+    {
+        title:"安全图标",
+        type:"safety"
+    },
+    {
+        title:"教育图标",
+        type:"education"
+    },
+    {
+        title:"天气图标",
+        type:"weather"
+    },
+    {
+        title:"体育图标",
+        type:"sport"
+    },
+    {
+        title:"宠物图标",
+        type:"pet"
+    },
+    {
+        title:"消息图标",
+        type:"msg"
+    }
+]
+
 const universalData = [
     { type: "bb-more-1" },
     { type: "bb-alignMiddle" },
@@ -542,4 +592,21 @@ const weatherData = [
 
 export class IUniversal {
     uniData = universalData
+    eduData = educationData
+    emoData = emojiData
+    fooData = foodData
+    imgData = imageData
+    msgData = msgData
+    musicData = musicData
+    petData = petData
+    safetyData = safetyData
+    shopData = shoppingData
+    socialData = socialData
+    sportData = sportData
+    videoData = videoData
+    weatherData =weatherData
 }
+
+ export class SubNav {
+    subData = subNav
+ }

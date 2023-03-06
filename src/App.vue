@@ -56,7 +56,6 @@ body,
   background-color: @soft100 !important;
   border: none !important;
   color: @heavy100 !important;
-
 }
 .el-col {
   // 添加所有el-col的下间距
@@ -198,7 +197,7 @@ body,
     margin-top: 12px;
   }
 }
-.tableListBox{
+.tableListBox {
   .el-card {
     max-width: 1280px;
     min-width: 1040px;
@@ -244,5 +243,20 @@ body,
     margin-top: 60px;
   }
 }
+.subCard {
+  min-width: 1040px;
+  .subNav {
+    div {
+      color: @heavy100;
+      line-height: 48px;
+    }
+    div:hover {
+      color: @mainColor;
+    }
+    .active {
+      color: @mainColor;
+    }
+  }
 
+}
 </style>
