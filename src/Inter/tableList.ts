@@ -83,18 +83,6 @@ const data:IUser[] = [
         username:"ChribBi",
         name:"BiBi",
         address:"No. 189, Grove St, Los Angeles"
-    },
-    {
-        date:"2023-01-12",
-        username:"ChribBi",
-        name:"BiBi",
-        address:"No. 189, Grove St, Los Angeles"
-    },
-    {
-        date:"2023-01-12",
-        username:"ChribBi",
-        name:"BiBi",
-        address:"No. 189, Grove St, Los Angeles"
     }
 ]
 

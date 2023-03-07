@@ -28,14 +28,7 @@
       <el-col :md="12" :lg="8">
         <CategoryArea></CategoryArea>
       </el-col>
-      <el-col :md="12" :lg="8">
-        <el-card shadow="never">
-          <p>test icon</p>
-          <!-- <i class="bbIcon bb-more-1" style="font-size:102px;"></i> -->
-          <BBIcon name="bb-home-1" color="@mainColor"></BBIcon>
-          <BBIcon name="bb-download1" size="32"></BBIcon>
-        </el-card>
-      </el-col>
+
     </el-row>
   </div>
 </template>
@@ -70,10 +63,3 @@ import BBIcon from "@/components/iconComponent.vue"
 
 export default class extends Vue {}
 </script>
-
-<style lang="less" scoped>
-// light mode 颜色样式
-@import url(@/assets/sytle/lightConfig.less);
-// dark mode 颜色样式
-// @import url(@/assets/sytle/darkConfig.less);
-</style>

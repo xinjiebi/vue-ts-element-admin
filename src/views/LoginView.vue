@@ -2,7 +2,7 @@
   <div class="signInBox">
     <div class="signInForm">
       <img src="@/assets/logo.png" alt="" />
-      <h3 class="header3">Welcome Back:)</h3>
+      <h3 class="H4">Welcome Back:)</h3>
       <el-form
         :model="signForm"
         status-icon
@@ -12,7 +12,7 @@
         class="demo-signForm"
       >
         <el-form-item label="Username" prop="username">
-          <el-input v-model="signForm.username" autocomplete="off" />
+          <el-input v-model="signForm.username" autocomplete="off" placeholder="" />
         </el-form-item>
         <el-form-item label="Password" prop="password">
           <el-input
@@ -49,36 +49,3 @@ export default class Login extends Vue {
   }
 }
 </script>
-
-<style lang="less" scoped>
-.signInBox {
-  display: flex;
-  justify-content: space-between;
-  overflow: hidden;
-  .signInForm {
-    width: 30%;
-    padding: 15% 80px;
-    img {
-      width: 92px;
-      height: 92px;
-    }
-    .el-form {
-      margin-top: 40px;
-    }
-    .el-button {
-      width: 120px;
-      margin-top: 20px;
-    }
-  }
-  .signInImg {
-    width: 70%;
-    height: 100vh;
-    
-    .el-image {
-      width: 100%;
-      height: 100%;
-      border-radius: 20px 0 0 20px;
-    }
-  }
-}
-</style>

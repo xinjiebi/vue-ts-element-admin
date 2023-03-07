@@ -3,11 +3,10 @@
     <div class="menuBox">
       <div class="menuHeader">
         <img src="@/assets/head.png" alt="" />
-        <h5 class="header7">Welcome BiBi :)</h5>
-        <h6 class="body5">XiYouMi Design</h6>
-        <div class="cutline"></div>
+        <h5 class="subTitle1">Welcome BiBi :)</h5>
+        <h6 class="subTitle3">XiYouMi Design</h6>
         <div class="searchBox">
-          <p class="body3">Search something</p>
+          <p class="body2">Search something</p>
         </div>
       </div>
       <el-menu
@@ -63,5 +62,3 @@ export default class HomeView extends Vue {
 }
 </script>
 
-<style lang="less" scoped>
-</style>

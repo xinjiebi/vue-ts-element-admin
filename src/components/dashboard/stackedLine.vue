@@ -2,7 +2,7 @@
      <div class="dashboardCard">
         <el-card shadow="never">
             <h3 class="header7">Stacked Line</h3>
-            <div id="stackedLine" :style="{ width: '100%', height: '256px' }"></div>
+            <div id="stackedLine" :style="{ width: '100%', height: '280px' }"></div>
         </el-card>
      </div>
 </template>
@@ -18,6 +18,3 @@ import { StackedLine } from "@/Inter/dashboard";
 })
 export default class extends Vue {}
 </script>
-
-<style scoped>
-</style>

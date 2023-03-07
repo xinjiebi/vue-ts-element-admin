@@ -17,6 +17,3 @@ import { Radar } from "@/Inter/dashboard";
 })
 export default class extends Vue {}
 </script>
-
-<style scoped>
-</style>

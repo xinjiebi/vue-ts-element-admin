@@ -54,18 +54,3 @@ export default class extends Vue {
   }
 }
 </script>
-  
-  <style lang="less" scoped>
-.el-card {
-  height: calc(100vh - 120px);
-  overflow: auto;
-  .el-table {
-    height: calc(100vh - 200px);
-  }
-  .el-pagination {
-    position: fixed;
-    right: 40px;
-    margin-top: 12px;
-  }
-}
-</style>

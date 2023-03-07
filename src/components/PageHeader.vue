@@ -1,6 +1,6 @@
 <template>
   <div class="pageHeader">
-    <h2 class="header5">{{ pageHeader }}</h2>
+    <h2 class="H6">{{ pageHeader }}</h2>
     <div class="enter">
       <el-button circle
         ><el-icon size="20px"><QuestionFilled /></el-icon
@@ -27,6 +27,3 @@ export default class PageHeader extends Vue {
     pageHeader!:string
 }
 </script>
-
-<style scoped>
-</style>

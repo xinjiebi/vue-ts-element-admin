@@ -1,5 +1,5 @@
 <template>
-  <div class="subCard">
+  <div class="iconBox">
     <el-row :gutter="20">
       <el-col :md="4" :lg="2">
         <div class="subNav" v-for="item in subData" :key="item.type">
@@ -33,9 +33,6 @@ import BBIcon from "@/components/iconComponent.vue";
   components: {
     BBIcon,
   },
-  // mounted() {
-  //   this.uniData = new IUniversal().uniData;
-  // },
 })
 export default class extends Vue {
   uniData = new IUniversal().uniData;
@@ -43,17 +40,3 @@ export default class extends Vue {
   selectTyoe = new SubNav().subData[0].type;
 }
 </script>
-
-<style lang="less" scoped>
-.maxCard {
-  .el-card {
-    .el-col {
-      p {
-        font-size: 12px;
-        margin: 8px 0 24px 0;
-        color: #999;
-      }
-    }
-  }
-}
-</style>

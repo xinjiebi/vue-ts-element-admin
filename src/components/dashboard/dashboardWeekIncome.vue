@@ -1,26 +1,20 @@
 <template>
-  <div class="dashboardCard">
-    <el-card shadow="never">
-      <p class="body3">{{ incomeData.title }}</p>
-      <h2 class="header7">$ {{ incomeData.money }}</h2>
-      <p class="body3">{{ incomeData.percent }}%</p>
-    </el-card>
-  </div>
+  <el-card class="weekData" shadow="never">
+    <p class="body2">{{ incomeData.title }}</p>
+    <h2 class="H5">$ {{ incomeData.money }}</h2>
+    <p class="body2">{{ incomeData.percent }}%</p>
+  </el-card>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 import { DashboardData } from "@/Inter/dashboard";
 @Options({
-  mounted(){
+  mounted() {
     console.log(new DashboardData().income);
-  }
+  },
 })
-
 export default class dashboardWeek extends Vue {
-  incomeData= new DashboardData().income
+  incomeData = new DashboardData().income;
 }
 </script>
-
-<style scoped>
-</style>

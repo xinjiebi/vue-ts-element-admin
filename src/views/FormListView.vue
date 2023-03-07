@@ -1,5 +1,5 @@
 <template>
-  <div class="maxCard">
+  <div class="formBox">
     <el-card shadow="never">
       <el-form :model="form" label-width="120px">
         <el-form-item label="Activity name">
@@ -138,7 +138,3 @@ export default class extends Vue {
   }
 }
 </script>
-
-<style lang="less" scoped>
-
-</style>

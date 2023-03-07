@@ -1,11 +1,9 @@
 <template>
-  <div class="dashboardCard">
-    <el-card shadow="never">
-      <p class="body3">{{ listenData.title }}</p>
-      <h2 class="header7">{{ listenData.number }}</h2>
-      <p class="body3">{{ listenData.percent }}%</p>
+    <el-card class="weekData" shadow="never">
+      <p class="body2">{{ listenData.title }}</p>
+      <h2 class="H5">{{ listenData.number }}</h2>
+      <p class="body2">{{ listenData.percent }}%</p>
     </el-card>
-  </div>
 </template>
 
 <script lang="ts">
@@ -16,6 +14,3 @@ export default class dashboardWeek extends Vue {
   listenData = new DashboardData().listen;
 }
 </script>
-
-<style scoped>
-</style>
