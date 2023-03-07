@@ -591,16 +591,16 @@ const weatherData = [
 ]
 
 export class IUniversal {
-    uniData = universalData
-    eduData = educationData
-    emoData = emojiData
-    fooData = foodData
-    imgData = imageData
+    universalData = universalData
+    educationData = educationData
+    emojiData = emojiData
+    foodData = foodData
+    imageData = imageData
     msgData = msgData
     musicData = musicData
     petData = petData
     safetyData = safetyData
-    shopData = shoppingData
+    shoppingData = shoppingData
     socialData = socialData
     sportData = sportData
     videoData = videoData

@@ -136,7 +136,6 @@ body,
 
 }
 
-
 .cutline {
     background-color: @textPrimary5;
     width: 100%;
@@ -206,14 +205,13 @@ body,
         }
 
         .el-menu-item:hover {
-            background-color: @maskLight;
-            color: @textOnMask;
+            background-color: @secondary;
+            color: @textPrimary;
         }
 
         .is-active {
             background-color: @secondary;
             color: @textPrimary !important;
-            font-weight: 900;
         }
     }
 
@@ -360,20 +358,35 @@ body,
 
 .iconBox {
     min-width: 1040px;
+    // background-color: bisque;
 
     .subNav {
-        div {
-            color: @textPrimary;
+        border-right: 1px solid @maskLight;
+
+        p {
+            color: @textPrimary3;
             line-height: 48px;
         }
 
-        div:hover {
-            color: @primary;
+        p:hover {
+            color: @secondaryDark;
         }
 
         .active {
-            color: @primary;
+            color: @secondaryDark;
         }
     }
+
+    .iconStyle {
+        text-align: center;
+        padding: 20px 0;
+
+        p {
+            margin-top: 12px;
+            font-size: 12px;
+            color: @textPrimary4;
+        }
+    }
+
 
 }

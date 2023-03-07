@@ -17,9 +17,6 @@ import { Options, Vue } from "vue-class-component";
     }else{
         this.iconStyle = `font-size:${this.size}px;color:${this.color}`;
     }
-
-    console.log(this.iconStyle);
-    
   },
 })
 export default class extends Vue {
