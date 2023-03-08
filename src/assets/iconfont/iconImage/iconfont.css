@@ -1,12 +1,12 @@
 @font-face {
-  font-family: "iconfont"; /* Project id 3928282 */
-  src: url('iconfont.woff2?t=1678059355647') format('woff2'),
-       url('iconfont.woff?t=1678059355647') format('woff'),
-       url('iconfont.ttf?t=1678059355647') format('truetype');
+  font-family: "bbIcon"; /* Project id 3928282 */
+  src: url('iconfont.woff2?t=1678243044229') format('woff2'),
+       url('iconfont.woff?t=1678243044229') format('woff'),
+       url('iconfont.ttf?t=1678243044229') format('truetype');
 }
 
-.iconfont {
-  font-family: "iconfont" !important;
+.bbIcon {
+  font-family: "bbIcon" !important;
   font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;

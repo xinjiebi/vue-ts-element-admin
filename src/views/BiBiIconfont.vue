@@ -20,7 +20,7 @@
             v-for="item in interData"
             :key="item"
           >
-            <BBIcon class="iconStyle" :name="item.type"></BBIcon>
+            <BBIcon :name="item.type"></BBIcon>
             <p class="iconText">{{ item.type }}</p>
           </el-col>
         </el-row>
@@ -38,76 +38,23 @@ import BBIcon from "@/components/iconComponent.vue";
   components: {
     BBIcon,
   },
+  mounted(){
+    const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.id = 'iconfontStyle'
+        link.type = 'text/css'
+        link.href = require('@/assets/iconfont/iconUniversal/iconfont.css')
+        document.getElementsByTagName("head")[0].appendChild(link);
+  }
 })
 export default class extends Vue {
   interData = new IUniversal().universalData;
   subData = new SubNav().subData;
   selectType = new SubNav().subData[0].type;
   selectMenu(type: string) {
-    console.log(type);
-    if(type == 'universal'){
-      this.interData = new IUniversal().universalData;
-        this.selectType = type;
-        console.log(this.interData);
-    }else if(type == 'music'){
-      this.interData = new IUniversal().musicData;
-        this.selectType = type;
-        console.log(this.interData);
-    }
-    // switch (type) {
-    //   case "universal":
-    //     this.interData = new IUniversal().universalData;
-    //     this.selectType = type;
-    //     console.log(this.interData);
-        
-    //     break;
-    //   case "music":
-    //     this.interData = new IUniversal().musicData;
-    //     this.selectType = type;
-    //     console.log(this.interData);
-        
-    //     break;
-    //   case "social":
-    //     this.interData = new IUniversal().socialData;
-    //     this.selectType = type;
-    //     break;
-    //   case "shopping":
-    //     this.interData = new IUniversal().shoppingData;
-    //     this.selectType = type;
-    //     break;
-    //   case "food":
-    //     this.interData = new IUniversal().foodData;
-    //     this.selectType = type;
-    //     break;
-    //   case "emoji":
-    //     this.interData = new IUniversal().emojiData;
-    //     this.selectType = type;
-    //     break;
-    //   case "safety":
-    //     this.interData = new IUniversal().safetyData;
-    //     this.selectType = type;
-    //     break;
-    //   case "education":
-    //     this.interData = new IUniversal().educationData;
-    //     this.selectType = type;
-    //     break;
-    //   case "weather":
-    //     this.interData = new IUniversal().weatherData;
-    //     this.selectType = type;
-    //     break;
-    //   case "sport":
-    //     this.interData = new IUniversal().sportData;
-    //     this.selectType = type;
-    //     break;
-    //   case "pet":
-    //     this.interData = new IUniversal().petData;
-    //     this.selectType = type;
-    //     break;
-    //   case "msg":
-    //     this.interData = new IUniversal().msgData;
-    //     this.selectType = type;
-    //     break;
-    // }
+    this.selectType = type;
+    this.interData = new IUniversal().changeData(type)!;
   }
 }
 </script>
+

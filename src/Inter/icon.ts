@@ -1,51 +1,51 @@
 const subNav = [
     {
-        title:"通用图标",
-        type:"universal"
+        title: "通用图标",
+        type: "universal"
     },
     {
-        title:"音乐图标",
-        type:"music"
+        title: "音乐图标",
+        type: "music"
     },
     {
-        title:"社交图标",
-        type:"social"
+        title: "社交图标",
+        type: "social"
     },
     {
-        title:"购物图标",
-        type:"shopping"
+        title: "购物图标",
+        type: "shopping"
     },
     {
-        title:"食物图标",
-        type:"food"
+        title: "食物图标",
+        type: "food"
     },
     {
-        title:"表情图标",
-        type:"emoji"
+        title: "表情图标",
+        type: "emoji"
     },
     {
-        title:"安全图标",
-        type:"safety"
+        title: "安全图标",
+        type: "safety"
     },
     {
-        title:"教育图标",
-        type:"education"
+        title: "教育图标",
+        type: "education"
     },
     {
-        title:"天气图标",
-        type:"weather"
+        title: "天气图标",
+        type: "weather"
     },
     {
-        title:"体育图标",
-        type:"sport"
+        title: "体育图标",
+        type: "sport"
     },
     {
-        title:"宠物图标",
-        type:"pet"
+        title: "宠物图标",
+        type: "pet"
     },
     {
-        title:"消息图标",
-        type:"msg"
+        title: "消息图标",
+        type: "msg"
     }
 ]
 
@@ -604,9 +604,82 @@ export class IUniversal {
     socialData = socialData
     sportData = sportData
     videoData = videoData
-    weatherData =weatherData
+    weatherData = weatherData
+    changeData(type: string) {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.id = 'iconfontStyle'
+        link.type = 'text/css'
+        switch (type) {
+            case "universal":
+                this.removeCss()
+                link.href = require('@/assets/iconfont/iconUniversal/iconfont.css')
+                document.getElementsByTagName("head")[0].appendChild(link);
+                return this.universalData;
+            case "music":
+                this.removeCss()
+                link.href = require('@/assets/iconfont/iconMusic/iconfont.css')
+                document.getElementsByTagName("head")[0].appendChild(link);
+                return this.musicData
+            case "social":
+                this.removeCss()
+                link.href = require('@/assets/iconfont/iconSocial/iconfont.css')
+                document.getElementsByTagName("head")[0].appendChild(link);
+                return this.socialData
+            case "shopping":
+                this.removeCss()
+                link.href = require('@/assets/iconfont/iconShopping/iconfont.css')
+                document.getElementsByTagName("head")[0].appendChild(link);
+                return this.shoppingData
+            case "food":
+                this.removeCss()
+                link.href = require('@/assets/iconfont/iconFood/iconfont.css')
+                document.getElementsByTagName("head")[0].appendChild(link);
+                return this.foodData
+            case "emoji":
+                this.removeCss()
+                link.href = require('@/assets/iconfont/iconEmoji/iconfont.css')
+                document.getElementsByTagName("head")[0].appendChild(link);
+                return this.emojiData
+            case "safety":
+                this.removeCss()
+                link.href = require('@/assets/iconfont/iconSafety/iconfont.css')
+                document.getElementsByTagName("head")[0].appendChild(link);
+                return this.safetyData
+            case "education":
+                this.removeCss()
+                link.href = require('@/assets/iconfont/iconEducation/iconfont.css')
+                document.getElementsByTagName("head")[0].appendChild(link);
+                return this.educationData
+            case "weather":
+                this.removeCss()
+                link.href = require('@/assets/iconfont/iconWeather/iconfont.css')
+                document.getElementsByTagName("head")[0].appendChild(link);
+                return this.weatherData
+            case "sport":
+                this.removeCss()
+                link.href = require('@/assets/iconfont/iconSport/iconfont.css')
+                document.getElementsByTagName("head")[0].appendChild(link);
+                return this.sportData
+            case "pet":
+                this.removeCss()
+                link.href = require('@/assets/iconfont/iconPet/iconfont.css')
+                document.getElementsByTagName("head")[0].appendChild(link);
+                return this.petData
+            case "msg":
+                this.removeCss()
+                link.href = require('@/assets/iconfont/iconMsg/iconfont.css')
+                document.getElementsByTagName("head")[0].appendChild(link);
+                return this.msgData
+        }
+    }
+    removeCss() {
+        const removeId = document.getElementById("iconfontStyle")
+        removeId!.parentNode!.removeChild(removeId!)
+    }
+
 }
 
- export class SubNav {
+export class SubNav {
     subData = subNav
- }
+}
